@@ -1,0 +1,74 @@
+.carrossel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Faz a imagem "grudar" na tela */
+  width: 100%;
+  max-width: 600px;
+}
+
+.carrossel img {
+  flex: 0 0 100%;
+  scroll-snap-align: start; /* Alinha a imagem perfeitamente */
+  
+ 
+  width: 100%;            /* Força a imagem a ter a largura do carrossel (600px) */
+  height: 400px;          /* Define uma altura fixa para o carrossel */
+  object-fit: cover;      /* Corta a imagem proporcionalmente para não ficar esticada ou esmagada */
+}
+article {
+  display: flex;
+  justify-content: center; /* Centraliza o carrossel horizontalmente */
+  align-items: center;     /* Centraliza verticalmente (se o article tiver altura) */
+  width: 100%;             /* Garante que o container ocupe a largura toda da tela */
+  padding: 20px 0;         /* Dá um espaço leve em cima e embaixo do carrossel */
+  background-color: rgb(137, 207, 240); /* Azul Bebê */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+body {
+  background-color: rgb(240, 248, 255); /* Branco Gelo */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* "vh" significa Viewport Height. 100vh força o body a ter a altura exata da tela */
+  /* Aplica a fonte de leitura no site inteiro */
+  font-family: 'Inter', sans-serif;
+  color: #333333; /* Um cinza escuro é mais confortável para ler do que o preto puro */
+}
+
+/* Aplica a fonte acolhedora nos títulos e na frase de impacto do header */
+header, h1, h2, .frase-impacto {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700; /* Deixa o título mais gordinho/destacado */
+  color: #2c3e50;   /* Tom escuro elegante */
+}
+
+
+
+
+
+footer{
+  background-color: yellow;
+  padding: 20px;            /* Dá um espaço interno para o logo não ficar colado nas bordas */
+  text-align: center;       /* Centraliza o logo do instagram */
+  width: 100%;              /* Garante que ele ocupe toda a largura */
+  box-sizing: border-box;   /* Evita que o padding quebre a largura da tela */
+  margin-top: auto;         /* Mágica do Flexbox: se o body tiver 100vh, isso empurra o footer para o final */
+}
+.btn-rede-social {
+  background: transparent;  /* Remove qualquer cor de fundo do botão */
+  border: none;             /* Remove a borda padrão do botão */
+  outline: none;            /* Remove o contorno que aparece ao clicar */
+  padding: 0;               /* Remove espaços internos extras */
+  cursor: pointer;          /* Faz o ponteiro do mouse virar a "mãozinha" de clique */
+}
+
+/* Garante que a imagem dentro do botão também não tenha bordas */
+.btn-rede-social img {
+  border: none;
+  outline: none;
+}
+.btn-rede-social:focus-visible {
+  outline: 2px solid #000; /* Mostra uma borda discreta apenas para quem navega por teclado */
+}
