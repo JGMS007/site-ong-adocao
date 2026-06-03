@@ -43,18 +43,18 @@ header, h1, h2, .frase-impacto {
   font-weight: 700; /* Deixa o título mais gordinho/destacado */
   color: #2c3e50;   /* Tom escuro elegante */
 }
+footer {
+  background-color: yellow; /* Mantive o seu amarelo */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto; /* Empurra o footer para o final da página */
 
-
-
-
-
-footer{
-  background-color: yellow;
-  padding: 20px;            /* Dá um espaço interno para o logo não ficar colado nas bordas */
-  text-align: center;       /* Centraliza o logo do instagram */
-  width: 100%;              /* Garante que ele ocupe toda a largura */
-  box-sizing: border-box;   /* Evita que o padding quebre a largura da tela */
-  margin-top: auto;         /* Mágica do Flexbox: se o body tiver 100vh, isso empurra o footer para o final */
+  /* A MÁGICA COMEÇA AQUI */
+  display: flex;
+  justify-content: center; /* Centraliza todos os botões no meio da tela (horizontal) */
+  align-items: center;     /* O SEGREDO: Centraliza a logo e os textos perfeitamente na vertical */
+  gap: 20px;               /* Dá um espaço idêntico e controlado entre cada botão */
 }
 .btn-rede-social {
   background: transparent;  /* Remove qualquer cor de fundo do botão */
@@ -71,4 +71,21 @@ footer{
 }
 .btn-rede-social:focus-visible {
   outline: 2px solid #000; /* Mostra uma borda discreta apenas para quem navega por teclado */
+}
+.btn-sobre, .btn-contatos, .btn-home{
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: #2c3e50;  
+  /* Deixa o botão transparente e sem bordas para parecer um link do Instagram */
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  font-size: 16px; /* Um tamanho confortável para ler */
+  padding: 5px 10px;
+}
+
+/* Um efeito visual opcional: quando passar o mouse por cima, o texto muda levemente de cor */
+.btn-sobre:hover, .btn-contatos:hover {
+  color: #7f8c8d;
 }
