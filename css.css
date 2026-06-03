@@ -34,7 +34,7 @@ body {
   min-height: 100vh; /* "vh" significa Viewport Height. 100vh força o body a ter a altura exata da tela */
   /* Aplica a fonte de leitura no site inteiro */
   font-family: 'Inter', sans-serif;
-  color: #333333; /* Um cinza escuro é mais confortável para ler do que o preto puro */
+  color: #333333; /* Um cinza escuro*/
 }
 
 /* Aplica a fonte acolhedora nos títulos e na frase de impacto do header */
@@ -44,13 +44,12 @@ header, h1, h2, .frase-impacto {
   color: #2c3e50;   /* Tom escuro elegante */
 }
 footer {
-  background-color: yellow; /* Mantive o seu amarelo */
+  background-color: yellow;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
   margin-top: auto; /* Empurra o footer para o final da página */
 
-  /* A MÁGICA COMEÇA AQUI */
   display: flex;
   justify-content: center; /* Centraliza todos os botões no meio da tela (horizontal) */
   align-items: center;     /* O SEGREDO: Centraliza a logo e os textos perfeitamente na vertical */
