@@ -1,19 +1,49 @@
+
+article.carrossel-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  width: 100%;             
+  padding: 20px;         
+  background-color: rgb(137, 207, 240); 
+  border-radius: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  position: relative; 
+}
+
+
 .carrossel {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory; /* Faz a imagem "grudar" na tela */
+  overflow-x: hidden; 
+  scroll-behavior: smooth; /* Faz o deslize entre as fotos ser suave */
   width: 100%;
   max-width: 600px;
 }
 
 .carrossel img {
   flex: 0 0 100%;
-  scroll-snap-align: start; /* Alinha a imagem perfeitamente */
-  
- 
-  width: 100%;            /* Força a imagem a ter a largura do carrossel (600px) */
-  height: 400px;          /* Define uma altura fixa para o carrossel */
-  object-fit: cover;      /* Corta a imagem proporcionalmente para não ficar esticada ou esmagada */
+  width: 100%;            
+  height: 400px;          
+  object-fit: cover;      
+}
+
+
+.btn-carrossel {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 15px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  z-index: 10;
+  margin: 0 10px; /* Dá uma distânciazinha das imagens */
+}
+
+.btn-carrossel:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 article {
   display: flex;
@@ -26,9 +56,47 @@ article {
   padding: 20px;
   margin: 10px;
 }
+/* Estilo padrão do Header (Quando a pessoa entra no site) */
+header {
+  position: fixed; /* Mantém o menu fixo no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0; /* Espaçamento maior inicial */
+  background-color: #ffffff;
+  transition: all 0.4s ease; /* Animação suave para todas as mudanças */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;   /* Alinha a logo e o menu em linha vertical (um embaixo do outro) */
+  align-items: center;      /* Centraliza tudo horizontalmente */
+  justify-content: center;  /* Centraliza verticalmente */
+}
+
+/* Estilo padrão da Logo inicial */
+#logo {
+  height: 125px; /* Tamanho grande inicial */
+  transition: transform 0.4s ease, height 0.4s ease;
+}
+
+header.scrolled {
+  padding: 10px 0; 
+  background-color: rgba(255, 255, 255, 0.95); /* deixa levemente transparente */
+}
+
+header.scrolled #logo {
+  height: 40px; /* Reduz a logo pela metade */
+  /* Opcional: se quiser que ela vá um pouco mais para cima além de diminuir */
+  /* transform: translateY(-2px); */
+}
+
+
+
+
 body {
   background-color: rgb(240, 248, 255); /* Branco Gelo */
   margin: 0;
+  padding-top: 140px;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* "vh" significa Viewport Height. 100vh força o body a ter a altura exata da tela */
@@ -37,23 +105,29 @@ body {
   color: #333333; /* Um cinza escuro é mais confortável para ler do que o preto puro */
 }
 
-/* Aplica a fonte acolhedora nos títulos e na frase de impacto do header */
-header, h1, h2, .frase-impacto {
+
+ p, h1, h2 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 700; /* Deixa o título mais gordinho/destacado */
+  text-align: center;      /* Centraliza o texto da frase */
+  max-width: 800px;        /* Evita que ela fique esticada demais em telas muito grandes */
+  margin: 30px auto;       /* Dá um espaço em cima/baixo e centraliza o bloco na tela */
+  padding: 0 20px;         /* Evita que o texto encoste nas bordas em celulares */
+
   color: #2c3e50;   /* Tom escuro elegante */
 }
+
 footer {
-  background-color: yellow; /* Mantive o seu amarelo */
+  background-color: yellow; 
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
   margin-top: auto; /* Empurra o footer para o final da página */
 
-  /* A MÁGICA COMEÇA AQUI */
+  
   display: flex;
   justify-content: center; /* Centraliza todos os botões no meio da tela (horizontal) */
-  align-items: center;     /* O SEGREDO: Centraliza a logo e os textos perfeitamente na vertical */
+  align-items: center;     
   gap: 20px;               /* Dá um espaço idêntico e controlado entre cada botão */
 }
 .btn-rede-social {
@@ -81,11 +155,11 @@ footer {
   background: transparent;
   text-decoration: none;
   border: none;
-  font-size: 16px; /* Um tamanho confortável para ler */
+  font-size: 16px; 
   padding: 5px 10px;
 }
 
-/* Um efeito visual opcional: quando passar o mouse por cima, o texto muda levemente de cor */
+/* Um efeito visual: quando passar o mouse por cima, o texto muda levemente de cor */
 .btn-sobre:hover, .btn-contatos:hover {
   color: #7f8c8d;
 }
