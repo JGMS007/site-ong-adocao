@@ -102,7 +102,7 @@ body {
   min-height: 100vh; /* "vh" significa Viewport Height. 100vh força o body a ter a altura exata da tela */
   /* Aplica a fonte de leitura no site inteiro */
   font-family: 'Inter', sans-serif;
-  color: #333333; /* Um cinza escuro é mais confortável para ler do que o preto puro */
+  color: #333333; /* Um cinza escuro*/
 }
 
 
