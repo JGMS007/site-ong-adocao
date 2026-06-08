@@ -7,27 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <header style="text-align: center;">"Para o mundo, ele é apenas um animal. Para ele, você é o mundo inteirinho"</header>
-
- 
-    </br>
-
+  
+<header id="navbar">
+  <div class="logo-container">
+    <img id="logo" src="vivi pets logo.jpeg" alt="Logo do Site">
+  </div>
+</header>
+ <h2>"Para o mundo, ele é apenas um animal. Para ele, você é o mundo inteirinho"</h2>
+</br>
     <article>
-        <div class="carrossel">
-    <img src="foto1.jpg" alt="Foto 1" >
-    <img src="foto2.jpg" alt="Foto 2">
-    <img src="foto3.jpg" alt="Foto 3">
-        </div>
-      
+    <p>O projeto de proteção animal Vivi Pets atua na região de Guarulhos/SP, focando no resgate, reabilitação e doação responsável de cães e gatos.
+    </br>
+    A ONG mantém seus processos de adoção ativos através de entrevistas e visitas, garantindo a segurança dos animais.</p>
+    <img src="vivi pets logo.jpeg" alt="Ft da ONG">
     </article>
+</br>
+<article class="carrossel-container">
+    <button class="btn-carrossel" id="btn-prev">&#10094;</button>
+    
+    <div class="carrossel" id="meu-carrossel">
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+        <img src="foto4.jpeg" alt="Foto 4">
+    </div>   
+
+    <button class="btn-carrossel" id="btn-next">&#10095;</button>
+</article>
 </br>
     <footer>
      <a href="sobre.html" class="btn-sobre">Sobre a ONG</a>
-     <a href="contato.html" class="btn-contatos">Contato</a>
+     <a href="contatos.html" class="btn-contatos">Contato</a>
      <a class="btn-rede-social"><img src="instagram_logo-removebg-preview.png"  alt="Instagram" width="46" height="46" href=""></a>
     </footer>
+
+    <script src="javascript.js"></script>
 </body>
 </html>
