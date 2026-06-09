@@ -1,14 +1,14 @@
 .carrossel {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory; /* Faz a imagem "grudar" na tela */
+  scroll-snap-type: x mandatory; 
   width: 100%;
   max-width: 600px;
 }
 
 .carrossel img {
   flex: 0 0 100%;
-  scroll-snap-align: start; /* Alinha a imagem perfeitamente */
+  scroll-snap-align: start; 
   
  
   width: 100%;            /* Força a imagem a ter a largura do carrossel (600px) */
@@ -183,4 +183,23 @@ footer {
         max-width: 100%;
         height: 250px;
     }
+}
+.contact-banner-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(137, 207, 240);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.contact-banner-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
