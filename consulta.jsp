@@ -38,12 +38,13 @@
               out.print("<tr>");  
                 out.print("<th>Codigo</th>");
                 out.print("<th>Nome</th>");
-                out.print("<th>Idade</th>");
+                out.print("<th>Senha</th>");
                 out.print("<th>Email</th>");
+                out.print("<th>Telefone</th>");
               out.print("</tr>");  
 
               while ( dados.next()) {
-                out.print("</tr>");
+                out.print("<tr>");
                   out.print("<td>");
                   out.print( dados.getString("codigo"))  ;
                   out.print("</td>");
@@ -53,11 +54,15 @@
                   out.print("</td>");
 
                   out.print("<td>");
-                  out.print( dados.getString("idade"))  ;
+                  out.print( dados.getString("senha"))  ;
                   out.print("</td>");
 
                   out.print("<td>");
                   out.print( dados.getString("email"))  ;
+                  out.print("</td>");
+
+                  out.print("<td>");
+                  out.print( dados.getString("telefone"))  ;
                   out.print("</td>");
 
                   out.print("</tr>");
