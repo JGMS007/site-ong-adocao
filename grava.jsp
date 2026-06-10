@@ -4,8 +4,9 @@
 
     //Criar as variaveis e armazenar as informações digitadas pelo usuário
     String vnome  = request.getParameter("txtnome") ;
-    int    vidade = Integer.parseInt( request.getParameter("txtidade") );
+    String vsenha  = request.getParameter("txtsenha") ;
     String vemail = request.getParameter("txtemail") ;
+    String vtelefone = request.getParameter("txttelefone") ;
 
     //Variaveis para acessar o banco de dados
     String database  = "exemplos" ;
@@ -25,13 +26,14 @@
     //Abrir a conexao com o banco
     conexao = DriverManager.getConnection( endereco , usuario , senha ) ;
 
-    String sql = "INSERT INTO cadastro (nome,idade,email) VALUES (?, ?, ?)" ;
+    String sql = "INSERT INTO cadastro (nome,senha,email,telefone) VALUES (?, ?, ?, ?)" ;
 
     //Preparar o comando para inserir
     PreparedStatement stm = conexao.prepareStatement( sql ) ;
     stm.setString( 1 , vnome )  ;
-    stm.setInt( 2 , vidade )  ;
+    stm.setString( 2 , vsenha )  ;
     stm.setString( 3 , vemail )  ;
+    stm.setString( 4 , vtelefone )  ;
 
     stm.execute() ;
     stm.close() ;
