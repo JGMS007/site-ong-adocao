@@ -16,7 +16,7 @@
             String senha     = "" ;
 
             //DRIVER
-            String driver = "com.mysql.jdbc.Driver" ;
+            String driver = "com.mysql.cj.jdbc.Driver" ;
 
             //Carregar o Driver na memoria
             Class.forName( driver ) ;
